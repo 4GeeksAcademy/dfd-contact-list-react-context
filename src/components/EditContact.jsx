@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import { useContacts } from '../context/contactContext';
 import { updateContact } from "../services/apiServices";
+import { Link } from "react-router-dom";
 
 function EditContact() {
     const { id } = useParams();
@@ -186,6 +187,11 @@ function EditContact() {
                         </button>
                     </div>
                 </form>
+
+                <Link to="/">
+                    <span className="small text-decoration-none text-primary">&larr; Volver a Contactos</span>
+                </Link>
+
             </div>
         </div>
     );

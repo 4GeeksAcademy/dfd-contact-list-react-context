@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { addContact } from '../services/apiServices';
 import { useContacts } from '../context/contactContext';
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function ContactForm() {
     const [contact, setContact] = useState({
@@ -180,9 +181,9 @@ function ContactForm() {
                     </div>
                 </form>
 
-                <div className="mt-3">
-                    <a href="/" className="small text-decoration-none text-primary">&larr; Volver a Contactos</a>
-                </div>
+                <Link to="/">
+                    <span className="small text-decoration-none text-primary">&larr; Volver a Contactos</span>
+                </Link>
 
             </div>
 
